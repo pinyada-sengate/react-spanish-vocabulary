@@ -26,7 +26,7 @@ const CategoryList = (props) => {
           id={place.id}
           image={place.image}
           title={place.title}
-          onDelete={props.onDeletePlace}
+          onDelete={props.onDeleteCategory}
         />
       ))}
     </ul>
