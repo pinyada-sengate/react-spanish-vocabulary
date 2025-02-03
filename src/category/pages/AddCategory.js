@@ -43,7 +43,7 @@ const AddCategory = () => {
       formData.append("title", formState.inputs.title.value);
       formData.append("image", formState.inputs.image.value);
       await sendRequest(
-        `${process.env.REACT_APP_BACKEND_URL}/category`,
+        `${process.env.REACT_APP_BACKEND_URL}/category/add`,
         "POST",
         formData,
         {
