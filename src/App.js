@@ -6,9 +6,9 @@ import {
   Switch,
 } from "react-router-dom";
 
-import Users from "./user/pages/Users";
-import AddCategory from "./category/pages/AddCategory";
 import MainNavigation from "./shared/components/Navigation/MainNavigation";
+import AddCategory from "./category/pages/AddCategory";
+import Categories from "./category/pages/Categories";
 
 const App = () => {
   return (
@@ -16,8 +16,8 @@ const App = () => {
       <MainNavigation />
       <main>
         <Switch>
-          <Route path="/" exact>
-            <Users />
+          <Route path="/category/getCategories" exact>
+            <Categories />
           </Route>
           <Route path="/category/add" exact>
             <AddCategory />

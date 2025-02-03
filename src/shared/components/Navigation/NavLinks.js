@@ -11,7 +11,7 @@ const NavLinks = (props) => {
   return (
     <ul className="nav-links">
       <li>
-        <NavLink to="/" exact>
+        <NavLink to="/category/getCategories" exact>
           ALL CATEGORIES
         </NavLink>
       </li>
