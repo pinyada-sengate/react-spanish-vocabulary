@@ -1,0 +1,36 @@
+import React from "react";
+
+import "./CategoryList.css";
+
+import Card from "../../shared/components/UIElements/Card";
+import Button from "../../shared/components/FormElements/Button";
+import CategoryItem from "./CategoryItem";
+
+const CategoryList = (props) => {
+  if (props.items.length === 0) {
+    return (
+      <div className="category-list center">
+        <Card>
+          <h2>No place found. Maybe create one?</h2>
+          <Button to="/category/add">Add Category</Button>
+        </Card>
+      </div>
+    );
+  }
+
+  return (
+    <ul className="category-list">
+      {props.items.map((place) => (
+        <CategoryItem
+          key={place.id}
+          id={place.id}
+          image={place.image}
+          title={place.title}
+          onDelete={props.onDeletePlace}
+        />
+      ))}
+    </ul>
+  );
+};
+
+export default CategoryList;
