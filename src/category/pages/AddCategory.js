@@ -14,6 +14,8 @@ import ErrorModal from "../../shared/components/UIElements/ErrorModal";
 import LoadingSpinner from "../../shared/components/UIElements/LoadingSpinner";
 import ImageUpload from "../../shared/components/FormElements/ImageUpload";
 
+import "./CategoryForm.css";
+
 const AddCategory = () => {
   const auth = useContext(AuthContext);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
@@ -57,7 +59,7 @@ const AddCategory = () => {
   return (
     <React.Fragment>
       <ErrorModal error={error} onClear={clearError} />
-      <form className="place-form" onSubmit={categorySubmitHandler}>
+      <form className="category-form" onSubmit={categorySubmitHandler}>
         {isLoading && <LoadingSpinner asOverlay />}
         <Input
           id="title"
