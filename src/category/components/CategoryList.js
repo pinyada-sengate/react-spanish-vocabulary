@@ -24,7 +24,7 @@ const CategoryList = (props) => {
         <CategoryItem
           key={category.id}
           id={category.id}
-          image={category.image_url}
+          image={category.image}
           title={category.title}
           onDelete={props.onDeleteCategory}
         />
