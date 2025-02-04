@@ -15,6 +15,7 @@ const Categories = () => {
         const responseData = await sendRequest(
           `${process.env.REACT_APP_BACKEND_URL}/category/getCategories`
         );
+        console.log(responseData.categories);
         setLoadedCategories(responseData.categories);
       } catch (err) {
         console.log(err);

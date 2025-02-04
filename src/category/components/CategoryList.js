@@ -11,7 +11,7 @@ const CategoryList = (props) => {
     return (
       <div className="category-list center">
         <Card>
-          <h2>No place found. Maybe create one?</h2>
+          <h2>No category found. Maybe create one?</h2>
           <Button to="/category/add">Add Category</Button>
         </Card>
       </div>
@@ -20,12 +20,12 @@ const CategoryList = (props) => {
 
   return (
     <ul className="category-list">
-      {props.items.map((place) => (
+      {props.items.map((category) => (
         <CategoryItem
-          key={place.id}
-          id={place.id}
-          image={place.image}
-          title={place.title}
+          key={category.id}
+          id={category.id}
+          image={category.image_url}
+          title={category.title}
           onDelete={props.onDeleteCategory}
         />
       ))}
