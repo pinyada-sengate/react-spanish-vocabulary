@@ -133,7 +133,7 @@ const Auth = () => {
             element="input"
             id="email"
             type="email"
-            label="E-Mail"
+            label="Email"
             validators={[VALIDATOR_EMAIL()]}
             errorText="Please enter a valid email address."
             onInput={inputHandler}
