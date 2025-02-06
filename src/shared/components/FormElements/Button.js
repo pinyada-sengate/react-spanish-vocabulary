@@ -20,6 +20,7 @@ const Button = (props) => {
     return (
       <Link
         to={props.to}
+        path={props.path}
         exact={props.exact}
         className={`button button--${props.size || "default"} ${
           props.inverse && "button--inverse"

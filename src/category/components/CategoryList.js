@@ -22,8 +22,8 @@ const CategoryList = (props) => {
     <ul className="category-list">
       {props.items.map((category) => (
         <CategoryItem
-          key={category.id}
-          id={category.id}
+          key={category._id}
+          id={category._id}
           image={category.image}
           title={category.title}
           onDelete={props.onDeleteCategory}

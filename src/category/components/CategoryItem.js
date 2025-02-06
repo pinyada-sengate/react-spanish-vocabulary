@@ -78,7 +78,7 @@ const CategoryItem = (props) => {
           <div className="category_item__actions">
             <Button
               to={`/vocabulary/getVocabularies/${props.id}`}
-              params={{ categoryId: props.id }}
+              path="/vocabulary/getVocabularies/:categoryId"
             >
               VIEW
             </Button>
