@@ -76,6 +76,7 @@ const CategoryItem = (props) => {
             <h2>{props.title}</h2>
           </div>
           <div className="category_item__actions">
+            <Button to={`/vocabulary/${props.id}`}>VIEW</Button>
             {auth.userId === props.creatorId && (
               <Button to={`/category/${props.id}`}>EDIT</Button>
             )}
