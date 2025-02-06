@@ -22,8 +22,8 @@ const VocabularyList = (props) => {
     <ul className="vocabulary-list">
       {props.items.map((vocabulary) => (
         <VocabularyItem
-          key={vocabulary.id}
-          id={vocabulary.id}
+          key={vocabulary._id}
+          id={vocabulary._id}
           image={vocabulary.image}
           es={vocabulary.es}
           en={vocabulary.en}

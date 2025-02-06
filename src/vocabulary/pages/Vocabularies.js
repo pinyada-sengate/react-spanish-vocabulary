@@ -26,10 +26,10 @@ const Vocabularies = () => {
     fetchVocabulariesBycategoryId(categoryId);
   }, [sendRequest, categoryId]);
 
-  const vocabularyDeletedHandler = (deletedVocabularyID) => {
+  const vocabularyDeletedHandler = (deletedVocabularyId) => {
     setLoadedVocabularies((prevVocabularies) =>
       prevVocabularies.filter(
-        (vocabulary) => vocabulary.id !== deletedVocabularyID
+        (vocabulary) => vocabulary._id !== deletedVocabularyId
       )
     );
   };
@@ -45,7 +45,7 @@ const Vocabularies = () => {
       {!isLoading && loadedVocabularies && (
         <VocabularyList
           items={loadedVocabularies}
-          onDeleteCategory={vocabularyDeletedHandler}
+          onDeleteVocabulary={vocabularyDeletedHandler}
         />
       )}
     </React.Fragment>
