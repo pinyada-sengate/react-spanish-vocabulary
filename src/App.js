@@ -11,6 +11,7 @@ import AddCategory from "./category/pages/AddCategory";
 import Categories from "./category/pages/Categories";
 import Auth from "./user/pages/Auth";
 import AddVocabulary from "./vocabulary/pages/AddVocabulary";
+import Vocabularies from "./vocabulary/pages/Vocabularies";
 
 import { AuthContext } from "./shared/context/auth-context";
 import { useAuth } from "./shared/hooks/auth-hook";
@@ -31,6 +32,9 @@ const App = () => {
         <Route path="/vocabulary/add" exact>
           <AddVocabulary />
         </Route>
+        <Route path="/vocabulary/getVocabularies/:categoryId" exact>
+          <Vocabularies />
+        </Route>
         <Redirect to="/" />
       </Switch>
     );
@@ -39,6 +43,9 @@ const App = () => {
       <Switch>
         <Route path="/category/getCategories" exact>
           <Categories />
+        </Route>
+        <Route path="/vocabulary/getVocabularies/:categoryId" exact>
+          <Vocabularies />
         </Route>
         <Route path="/auth">
           <Auth />
