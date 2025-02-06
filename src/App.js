@@ -10,6 +10,7 @@ import MainNavigation from "./shared/components/Navigation/MainNavigation";
 import AddCategory from "./category/pages/AddCategory";
 import Categories from "./category/pages/Categories";
 import Auth from "./user/pages/Auth";
+import AddVocabulary from "./vocabulary/pages/AddVocabulary";
 
 import { AuthContext } from "./shared/context/auth-context";
 import { useAuth } from "./shared/hooks/auth-hook";
@@ -26,6 +27,9 @@ const App = () => {
         </Route>
         <Route path="/category/add" exact>
           <AddCategory />
+        </Route>
+        <Route path="/vocabulary/add" exact>
+          <AddVocabulary />
         </Route>
         <Redirect to="/" />
       </Switch>
