@@ -26,7 +26,7 @@ const AddVocabulary = () => {
         value: "",
         isValid: false,
       },
-      categoryIds: {
+      categoryId: {
         value: "",
         isValid: false,
       },
@@ -45,9 +45,9 @@ const AddVocabulary = () => {
 
     try {
       const formData = new FormData();
-      formData.append("es", formState.inputs.title.value);
-      formData.append("en", formState.inputs.title.value);
-      formData.append("categoryIds", formState.inputs.title.value);
+      formData.append("es", formState.inputs.es.value);
+      formData.append("en", formState.inputs.en.value);
+      formData.append("categoryIds[0]", formState.inputs.categoryId.value);
       formData.append("image", formState.inputs.image.value);
       await sendRequest(
         `${process.env.REACT_APP_BACKEND_URL}/vocabulary/add`,
@@ -84,6 +84,15 @@ const AddVocabulary = () => {
           label="English"
           validators={[VALIDATOR_REQUIRE()]}
           errorText="Please enter an English vocabulary."
+          onInput={inputHandler}
+        />
+        <Input
+          id="categoryId"
+          element="input"
+          type="text"
+          label="Category Id"
+          validators={[VALIDATOR_REQUIRE()]}
+          errorText="Please enter a valid category id."
           onInput={inputHandler}
         />
         <ImageUpload
