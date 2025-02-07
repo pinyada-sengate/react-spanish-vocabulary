@@ -58,7 +58,7 @@ const Input = (props) => {
         placeholder={props.placeholder}
         onChange={changeHandler}
         onBlur={touchHandler}
-        value={inputState.value}
+        value={inputState.value ? inputState.value : props.value}
       />
     ) : (
       <textarea

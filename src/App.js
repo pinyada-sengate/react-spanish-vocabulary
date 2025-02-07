@@ -29,7 +29,7 @@ const App = () => {
         <Route path="/category/add" exact>
           <AddCategory />
         </Route>
-        <Route path="/vocabulary/add" exact>
+        <Route path="/vocabulary/add/:categoryId" exact>
           <AddVocabulary />
         </Route>
         <Route path="/vocabulary/getVocabularies/:categoryId" exact>

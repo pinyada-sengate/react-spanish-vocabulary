@@ -83,6 +83,14 @@ const CategoryItem = (props) => {
               VIEW
             </Button>
             {auth.userId === props.creatorId && (
+              <Button
+                to={`/vocabulary/add/${props.id}`}
+                path="/vocabulary/add/:categoryId"
+              >
+                ADD
+              </Button>
+            )}
+            {auth.userId === props.creatorId && (
               <Button to={`/category/${props.id}`}>EDIT</Button>
             )}
 

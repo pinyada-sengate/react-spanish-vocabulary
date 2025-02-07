@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import Input from "../../shared/components/FormElements/Input";
 import { VALIDATOR_REQUIRE } from "../../shared/util/validators";
@@ -14,6 +15,7 @@ import ImageUpload from "../../shared/components/FormElements/ImageUpload";
 import "./VocabularyForm.css";
 
 const AddVocabulary = () => {
+  const { categoryId } = useParams();
   const auth = useContext(AuthContext);
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
   const [formState, inputHandler] = useForm(
@@ -27,8 +29,8 @@ const AddVocabulary = () => {
         isValid: false,
       },
       categoryId: {
-        value: "",
-        isValid: false,
+        value: categoryId,
+        isValid: true,
       },
       image: {
         value: null,
@@ -94,6 +96,7 @@ const AddVocabulary = () => {
           validators={[VALIDATOR_REQUIRE()]}
           errorText="Please enter a valid category id."
           onInput={inputHandler}
+          value={categoryId}
         />
         <ImageUpload
           center
