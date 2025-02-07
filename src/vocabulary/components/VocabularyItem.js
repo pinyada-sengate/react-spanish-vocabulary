@@ -77,7 +77,7 @@ const VocabularyItem = (props) => {
           </div>
           <div className="vocabulary_item__actions">
             {auth.userId === props.creatorId && (
-              <Button to={`/category/${props.id}`}>EDIT</Button>
+              <Button to={`/vocabulary/edit/${props.id}`}>EDIT</Button>
             )}
 
             {auth.userId === props.creatorId && (
