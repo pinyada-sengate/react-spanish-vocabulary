@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 
 import "./VocabularyList.css";
 
@@ -7,12 +8,19 @@ import Button from "../../shared/components/FormElements/Button";
 import VocabularyItem from "./VocabularyItem";
 
 const VocabularyList = (props) => {
+  const { categoryId } = useParams();
+
   if (props.items.length === 0) {
     return (
       <div className="vocabulary-list center">
         <Card>
           <h2>No vocabulary found.</h2>
-          <Button to="/vocabulary/add">Add Vocabulary</Button>
+          <Button
+            to={`/vocabulary/add/${categoryId}`}
+            path="/vocabulary/add/:categoryId"
+          >
+            Add Vocabulary
+          </Button>
         </Card>
       </div>
     );
