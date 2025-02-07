@@ -96,7 +96,8 @@ const AddVocabulary = () => {
           validators={[VALIDATOR_REQUIRE()]}
           errorText="Please enter a valid category id."
           onInput={inputHandler}
-          value={categoryId}
+          initialValue={categoryId}
+          initialValid={true}
         />
         <ImageUpload
           center
