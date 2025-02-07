@@ -23,6 +23,10 @@ const ImageUpload = (props) => {
     fileReader.readAsDataURL(file);
   }, [file]);
 
+  useEffect(() => {
+    setPreviewUrl(props.image);
+  }, [props.image]);
+
   const pickImageHandler = () => {
     filePickerRef.current.click();
   };

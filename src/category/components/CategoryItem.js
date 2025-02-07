@@ -91,7 +91,7 @@ const CategoryItem = (props) => {
               </Button>
             )}
             {auth.userId === props.creatorId && (
-              <Button to={`/category/${props.id}`}>EDIT</Button>
+              <Button to={`/category/edit/${props.id}`}>EDIT</Button>
             )}
 
             {auth.userId === props.creatorId && (
