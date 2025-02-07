@@ -60,8 +60,8 @@ const AddVocabulary = () => {
         }
       );
 
-      //redirect user to home
-      history.push("/");
+      //redirect user to all categories
+      history.push("/category/getCategories");
     } catch (err) {}
   };
 
