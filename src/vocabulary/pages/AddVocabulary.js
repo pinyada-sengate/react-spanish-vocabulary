@@ -49,7 +49,7 @@ const AddVocabulary = () => {
       const formData = new FormData();
       formData.append("es", formState.inputs.es.value);
       formData.append("en", formState.inputs.en.value);
-      formData.append("categoryIds[0]", formState.inputs.categoryId.value);
+      formData.append("categoryId", formState.inputs.categoryId.value);
       formData.append("image", formState.inputs.image.value);
       await sendRequest(
         `${process.env.REACT_APP_BACKEND_URL}/vocabulary/add`,
